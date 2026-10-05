@@ -1,0 +1,175 @@
+{
+  "created_at": "2026-10-06T03:09:20.130587+08:00",
+  "scope": "continue_recording_only",
+  "original_media_included": false,
+  "target_os": "Linux GUI",
+  "cloud_capture_verified": false,
+  "files": [
+    {
+      "path": "cloud_preflight.py",
+      "bytes": 1385,
+      "sha256": "cc68e721d31fdc1564276537574f5d7f56dfae6a0c2f9107ce8cbf6422a399de"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 488,
+      "sha256": "dd5071d2f7b5befde0258702e399a9a8f434ed623b8ccc2c928b59d3edf5d0d0"
+    },
+    {
+      "path": "LINUX-RECORDING.md",
+      "bytes": 4160,
+      "sha256": "bcfaa7ce308a0ec3421defbdbd37e550b3f6560091d5704e6a42151763daa45a"
+    },
+    {
+      "path": "make_linux_capture_config.py",
+      "bytes": 2934,
+      "sha256": "6f825bba4e2562ad5ce2b77ab41c3da1b55a7dfe0e0ce8ae3b500f9abc3daac1"
+    },
+    {
+      "path": "START-HERE.md",
+      "bytes": 4239,
+      "sha256": "6823f0dd0cf11592f645f97ec4405a04d632447f0d650940fb7ec62626e73c94"
+    },
+    {
+      "path": "verify_bundle.py",
+      "bytes": 1205,
+      "sha256": "f42232e64739e128c79f7226dd3a62d700b45e762041465d4faadd918034682b"
+    },
+    {
+      "path": "配置与完整性工具测试.json",
+      "bytes": 301,
+      "sha256": "0cf689ffde9a40734604a24344fd3e04fbadb3aef752eddecb8fe364a8798ab9"
+    },
+    {
+      "path": "archive-course-local/.gitignore",
+      "bytes": 30,
+      "sha256": "ce5dffffa8bc6afd8ac6f298407c31069a2300f65d0ca85e8ba7d35017ce0b23"
+    },
+    {
+      "path": "archive-course-local/dependencies.json",
+      "bytes": 5939,
+      "sha256": "1bdc1a272be9cd30fd506443f723f1ce513d31147c186ecb2c1bbee69323eae2"
+    },
+    {
+      "path": "archive-course-local/SKILL.md",
+      "bytes": 6073,
+      "sha256": "92f6ae2d106a7749a2c196a6fe853ae2cc94aed55695f92a0c9842dbb923add7"
+    },
+    {
+      "path": "archive-course-local-project/README.md",
+      "bytes": 249,
+      "sha256": "bbc808d05250e5ec1967489dbb71b70260a38ea37a7a7656ff893791527cf774"
+    },
+    {
+      "path": "archive-course-local-project/目标与要求.md",
+      "bytes": 7923,
+      "sha256": "6ac114d0f3206c419df15f1d8d5d3f01a52216e9f7d9d16d2f748c4d6b7747cf"
+    },
+    {
+      "path": "范围截图/范围截图01.png",
+      "bytes": 340705,
+      "sha256": "6c49cb5b433705eb6e50f7f1c3a7cc34ce133e5436da9269e91c1fca25283cf8"
+    },
+    {
+      "path": "范围截图/范围截图02.png",
+      "bytes": 193720,
+      "sha256": "6b14e430e8a8d563ad8ad53fa40425c41678ca17a073f6fb175b026c85e0716e"
+    },
+    {
+      "path": "archive-course-local/agents/openai.yaml",
+      "bytes": 269,
+      "sha256": "ce98f0357961fd5a1dd8859d018372c95ddc47dcfec742f91fbf3468286ebddd"
+    },
+    {
+      "path": "archive-course-local/references/best-practices.md",
+      "bytes": 8737,
+      "sha256": "fc94f38db74a3d951b6b4dac53418a14fdd6c775270bb2ae2c93ec7f756f5661"
+    },
+    {
+      "path": "archive-course-local/references/boundary-tools.md",
+      "bytes": 2314,
+      "sha256": "f17e6ef5c3d7e14096f17ceb0f4e2046f2435cc12252c31e4044c8d61c223060"
+    },
+    {
+      "path": "archive-course-local/references/derivatives.md",
+      "bytes": 3826,
+      "sha256": "a89c9e6ce70d2382f7ab131885a23c46cb26fd32e74153c6208320fee6e6ddb6"
+    },
+    {
+      "path": "archive-course-local/references/handoff.md",
+      "bytes": 2602,
+      "sha256": "43be95853ddb8573b2893d13d54e610946c7f850d5d45ba53acd06e9625d8e39"
+    },
+    {
+      "path": "archive-course-local/references/material-tools.md",
+      "bytes": 2568,
+      "sha256": "f3b3e8181b57c2621b7b4174791f213be5b7700639445881bf565cc03c540c7e"
+    },
+    {
+      "path": "archive-course-local/references/page-tools.md",
+      "bytes": 6216,
+      "sha256": "8bf6f99f3aa5b23a5896500a4b6b921cd296949d3f718e7e98699255c42aa323"
+    },
+    {
+      "path": "archive-course-local/references/recording.md",
+      "bytes": 10698,
+      "sha256": "83f97ead88cf3299ca77ebf3c03860cdd60b672e049d16236e4daa6f1c32ced7"
+    },
+    {
+      "path": "archive-course-local/references/state.md",
+      "bytes": 3602,
+      "sha256": "347a3ab67a2f7374852718a2f42f6b04b70a35479ba26761474f726a80ba66cf"
+    },
+    {
+      "path": "archive-course-local/references/verification.md",
+      "bytes": 3156,
+      "sha256": "52ef01bddd808e9dd8ed2c3ec2657dc3877f7e9dd8997536246999c3366b3293"
+    },
+    {
+      "path": "archive-course-local/scripts/audit_boundaries.py",
+      "bytes": 8306,
+      "sha256": "3ee8994412d20737f64284e190252d29c7d4044aeb06b2530fb01ecff70489db"
+    },
+    {
+      "path": "archive-course-local/scripts/audit_materials.py",
+      "bytes": 8043,
+      "sha256": "d9c9cf1c3e2dee246a5db227096c0238acdc3570bf5155a6b92d34b122631f4b"
+    },
+    {
+      "path": "archive-course-local/scripts/check_archive.py",
+      "bytes": 6253,
+      "sha256": "c3f9182482af1ba5ae44c1c96ede9b83317e7c484eda8fbb877b6f4a111b562b"
+    },
+    {
+      "path": "archive-course-local/scripts/export_pages.py",
+      "bytes": 16002,
+      "sha256": "d1c855c2ac479d1bbe856c1918b646aafaa17feccde2cd312ff6fdd1a016b04a"
+    },
+    {
+      "path": "archive-course-local/scripts/inspect_media.py",
+      "bytes": 5493,
+      "sha256": "9cefa715fc01f2cedf0ac545444b2b0d65c0fd5578e036268de5a3f2f38ed8b4"
+    },
+    {
+      "path": "archive-course-local/scripts/record_lesson.py",
+      "bytes": 3863,
+      "sha256": "cf39f086b1260156d837da3a81512bf7018c75ecd81f3b6269341da34e0cdceb"
+    },
+    {
+      "path": "archive-course-local/scripts/render_pages.py",
+      "bytes": 4653,
+      "sha256": "bcb58e2fe7539805a720e984b3c56a3f132f2459374605b908b67eb919120321"
+    },
+    {
+      "path": "archive-course-local/scripts/scan_pages.py",
+      "bytes": 19344,
+      "sha256": "d5af224cb1d4fc98b05243236f277979af3bebefce5d30a0ab1783872b36d2eb"
+    },
+    {
+      "path": "archive-course-local/scripts/transcribe_lesson.py",
+      "bytes": 13454,
+      "sha256": "e880062f2ff282949310cb1ddcbec0b7a2cfd1efbff97c671e04c2e082d7abd8"
+    }
+  ],
+  "manifest_self_excluded": true
+}

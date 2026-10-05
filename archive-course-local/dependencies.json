@@ -1,0 +1,97 @@
+{
+  "required_files": [
+    "scripts/record_lesson.py",
+    "scripts/inspect_media.py",
+    "scripts/transcribe_lesson.py",
+    "scripts/check_archive.py",
+    "scripts/scan_pages.py",
+    "scripts/export_pages.py",
+    "scripts/render_pages.py",
+    "scripts/audit_materials.py",
+    "scripts/audit_boundaries.py",
+    "references/recording.md",
+    "references/verification.md",
+    "references/derivatives.md",
+    "references/best-practices.md",
+    "references/state.md",
+    "references/page-tools.md",
+    "references/material-tools.md",
+    "references/boundary-tools.md",
+    "references/handoff.md"
+  ],
+  "external": [
+    {
+      "name": "Python 3.9+",
+      "kind": "tool",
+      "setup": "https://www.python.org/downloads/ ; 使用现有经验证解释器，缺少时说明后按授权安装。",
+      "check": "在实际使用的解释器运行 --version；后续模块检查必须使用同一解释器。",
+      "on_missing": "暂停内置Python工具；继续课程目录与资料准备，不静默安装。"
+    },
+    {
+      "name": "FFmpeg/FFprobe (页面扫描目前要求支持 -/filter:v 的 FFmpeg 9)",
+      "kind": "tool",
+      "setup": "https://ffmpeg.org/download.html ; 使用已安装正式版本并显式传入可执行文件绝对路径。录制须具备已验证Windows窗口或桌面采集及音频输入。",
+      "check": "分别运行 -version；扫描所需选项先用合成CFR样例测试。录制另需本轮30—60秒样片、声音隔离和几何检查。",
+      "on_missing": "相应媒体阶段待补；不猜采集参数、不绕过播放保护、不静默安装或转码覆盖输入。"
+    },
+    {
+      "name": "numpy 与 Pillow (页面扫描/导出；numpy另用于转写)",
+      "kind": "python",
+      "modules": ["numpy", "PIL"],
+      "setup": "https://pypi.org/project/numpy/ 与 https://pypi.org/project/Pillow/ ; 获准后使用同一解释器的 pip install numpy Pillow。",
+      "check": "同一解释器执行 import numpy; from PIL import Image。",
+      "on_missing": "页面阶段待补，保留视频；不把导入失败报告成成功，不自动安装。"
+    },
+    {
+      "name": "ReportLab、pypdf、python-pptx (PDF/PPT导出与结构核验)",
+      "kind": "python",
+      "modules": ["reportlab", "pypdf", "pptx"],
+      "setup": "https://pypi.org/project/reportlab/ 、 https://pypi.org/project/pypdf/ 、 https://pypi.org/project/python-pptx/ ; 获准后使用同一解释器的 pip install reportlab pypdf python-pptx。",
+      "check": "同一解释器执行 from reportlab.pdfgen import canvas; from pypdf import PdfReader; from pptx import Presentation。",
+      "on_missing": "保留候选和人工选择，PDF/PPT导出待补；不依赖另一技能的私有模块或自动安装。"
+    },
+    {
+      "name": "已安装且覆盖页面标题字符的TrueType字体 (非ASCII PDF标题)",
+      "kind": "resource",
+      "setup": "使用系统现有且获准使用的TTF/TTC字体，按许可合法获取；运行时显式传入 --font-file，不随技能复制系统字体。",
+      "check": "导出前核查实际字体字符覆盖及SHA256，再实际渲染PDF确认长中文标题完整可读。",
+      "on_missing": "非ASCII标题导出提前拒绝；保留候选和选择，补充已安装兼容字体后另存导出，不偷偷安装或截断标题。"
+    },
+    {
+      "name": "faster-whisper (仅整节本地识别)",
+      "kind": "python",
+      "modules": ["faster_whisper"],
+      "setup": "https://github.com/SYSTRAN/faster-whisper ; 获准后在同一解释器安装 faster-whisper，或显式提供已安装依赖目录。",
+      "check": "同一解释器 import faster_whisper；用获准本地模型和短样本验证，必须 local_files_only。",
+      "on_missing": "识别阶段待补；资料验收和已有RAW边界审计可继续，不上传课程或自动下载模型。"
+    },
+    {
+      "name": "兼容faster-whisper的本地模型 (仅识别)",
+      "kind": "resource",
+      "setup": "按 faster-whisper 官方说明在获准环境合法准备本地兼容模型。模型运行时路径由用户提供，不随包保存。",
+      "check": "使用实际模型参数与模型目录加载 local_files_only=True，并做短样本验证。",
+      "on_missing": "保留待转写项，继续其他独立阶段，不自动联网下载。"
+    },
+    {
+      "name": "Poppler pdftoppm (实际PDF预览；PPT转PDF后也使用)",
+      "kind": "tool",
+      "setup": "https://poppler.freedesktop.org/ ; 优先复用已安装受信任发行，显式传入 pdftoppm 绝对路径。",
+      "check": "运行 pdftoppm -v，再对合成PDF运行 render_pages.py，核页数并实际查看PNG。",
+      "on_missing": "PDF结构可核，实际PDF渲染待补，不把原图当作PDF渲染证据。"
+    },
+    {
+      "name": "LibreOffice soffice (仅实际PPT渲染)",
+      "kind": "tool",
+      "setup": "https://www.libreoffice.org/download/download-libreoffice/ ; 仅使用获准已安装软件，显式传入 soffice 路径。",
+      "check": "运行 soffice --version；用 render_pages.py 在独立用户配置目录将实际PPT转PDF，再检查渲染和页数。",
+      "on_missing": "PPT嵌图/结构可核，实际PPT渲染待补；不静默安装、不把结构通过升级为渲染通过。"
+    },
+    {
+      "name": "获准真实浏览器、正常登录、采集与课程音频隔离",
+      "kind": "service",
+      "setup": "使用当前平台提供的浏览器插件或正常可见操作接口；账号凭据仅在运行时由用户提供。操作按接口实时文档及网站正常功能。",
+      "check": "本轮查看并操作正确课程页，核实际2x、零点、完整窗口、独立课程声道、无麦克风及样片真实回放。",
+      "on_missing": "依赖该接口的录制/下载待补；可处理现有获准本地资料，不绕过接口拒绝或网站保护。"
+    }
+  ]
+}

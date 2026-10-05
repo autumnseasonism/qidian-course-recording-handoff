@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+本地恢复记录_不入包/
+DELIVERY.json

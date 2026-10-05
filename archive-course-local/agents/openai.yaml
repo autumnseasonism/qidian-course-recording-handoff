@@ -1,0 +1,4 @@
+interface:
+  display_name: "本地课程归档"
+  short_description: "通过连续录制、逐节核验、页面导出与边界审计归档课程及资料"
+  default_prompt: "使用 $archive-course-local 完成本次课程录制、资料归档与衍生成果核验。"

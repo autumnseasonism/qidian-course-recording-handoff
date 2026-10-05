@@ -1,0 +1,12 @@
+{
+  "host": "Windows; not a Linux capture test",
+  "checks": [
+    "configuration_only_success_no_capture",
+    "existing_config_rejected",
+    "--session-type_rejected",
+    "--audio-monitor_rejected",
+    "manifest_verified",
+    "tamper_rejected"
+  ],
+  "actual_capture_started": false
+}
